@@ -233,7 +233,7 @@
           <div class="column is-full-width">
             <h2 class="title is-2">Video</h2>
             <div
-              class="video-container"
+              class="youtube-video-container"
               style="
                 position: relative;
                 padding-bottom: 56.25%;
@@ -497,6 +497,10 @@
               </ul>
             </div>
 
+            <div class="text-center">
+              <br />
+            </div>
+
             <div
               class="image-container"
               id="image-gehler-container"
@@ -604,7 +608,7 @@
             <div class="text-center">
               <ul class="nav nav-pills center-pills">
                 <li class="method-pill active" data-value="gehler">
-                  <a> Gehler dataset</a>
+                  <a>Gehler dataset</a>
                 </li>
                 <li class="method-pill" data-value="nus8">
                   <a>NUS-8 dataset</a>
@@ -612,7 +616,11 @@
               </ul>
             </div>
 
-            <div class="video-container" id="gehler-container">
+            <div class="text-center">
+              <br />
+            </div>
+
+            <div class="local-video-container" id="gehler-container">
               <video
                 class="video gehler"
                 id="compVideo2"
@@ -675,10 +683,9 @@
               </video>
             </div>
             <div
-              class="video-container active"
+              class="local-video-container"
               id="nus8-container"
               style="display: none"
-              ;
             >
               <video
                 class="video nus8"
@@ -744,7 +751,9 @@
 
             <script>
               const pills = document.querySelectorAll(".method-pill");
-              const containers = document.querySelectorAll(".video-container");
+              const localVideoContainers = document.querySelectorAll(
+                ".local-video-container"
+              );
               const allVideos = document.querySelectorAll("video");
 
               // 當任一影片播放時，同步播放所有影片
@@ -767,8 +776,8 @@
                   // 添加 active class 到被點擊的 pill
                   this.classList.add("active");
 
-                  // 隱藏所有視頻容器
-                  containers.forEach((container) => {
+                  // 隱藏所有本地視頻容器
+                  localVideoContainers.forEach((container) => {
                     container.style.display = "none";
                   });
 
@@ -780,9 +789,6 @@
                 });
               });
             </script>
-            <div class="text-center">
-              <br />
-            </div>
           </div>
         </div>
 
