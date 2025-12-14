@@ -122,16 +122,17 @@ body {
     Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #fefefe;
   color: #04143a;
   margin-left: 20%;
   margin-right: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .news-box {
-  border: 2px solid #ddd;
+  border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 8px;
   background-color: #fafafa;
@@ -222,8 +223,8 @@ table {
 
 p {
   color: #15171a;
-  font-size: 16px;
-  line-height: 31px;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 strong {
@@ -238,8 +239,8 @@ footer {
 
 .section-title {
   font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 16px;
+  font-size: 20px;
+  margin-bottom: 14px;
 }
 .sr {
   .has-animations {
@@ -264,7 +265,7 @@ footer {
 }
 
 h1.name {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 300;
   display: inline-block;
 }
@@ -301,17 +302,17 @@ h1.name {
 }
 
 .lead {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 350;
   margin-top: 50px;
   margin-bottom: 20px;
-  line-height: 32px;
+  line-height: 28px;
 }
 
 .intro p {
-  font-size: 16px;
-  margin-top: 20px;
-  margin-bottom: 16px;
+  font-size: 14px;
+  margin-top: 18px;
+  margin-bottom: 14px;
 }
 
 /*intro ends*/
@@ -321,10 +322,10 @@ h1.name {
 .publication {
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 16px;
-  line-height: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 22px;
   /*justify-content: center;*/
 }
 
@@ -406,7 +407,7 @@ h1.name {
   border-radius: 8px;
   text-align: center;
   padding: 4px 8px 4px 8px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .btn-active,
@@ -416,7 +417,7 @@ h1.name {
   background-color: #fff;
   box-shadow: 0px 5px 50px -8px #ddd;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Timeline styles*/
@@ -459,8 +460,8 @@ li {
   position: relative;
   display: inline-block;
   /* float: left; */
-  width: 16%;
-  max-width: 150px;
+  width: 20%;
+  max-width: 180px;
   vertical-align: top;
 }
 li .line {
@@ -472,13 +473,7 @@ li .line {
   color: #04143a;
 }
 
-li .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  max-width: 80px;
-}
+/* li .logo moved to Theme Toggle section */
 
 li .point {
   content: "";
@@ -501,9 +496,9 @@ li .description {
   font-weight: normal;
   z-index: 1;
   max-width: 100%;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 18px;
   color: #5b6a9a;
 }
 .description::before {
@@ -600,7 +595,7 @@ li .description {
 
 @media (max-width: 425px) {
   h1.name {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .card,
@@ -637,4 +632,127 @@ li .description {
   }
 }
 
+/* ============================================
+   Theme Toggle & Dark/Light Mode
+   ============================================ */
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 1000;
+  background: #eef0f7;
+  border: 2px solid #5b6a9a;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px -8px #ddd;
+}
+
+/* Timeline Logo */
+li .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80px;
+}
+
+/* ============================================
+   Dark Theme Styles
+   ============================================ */
+body.dark-theme {
+  background-color: #222222;
+  color: #e0e0e0;
+}
+
+body.dark-theme p {
+  color: #d0d0d0;
+}
+
+body.dark-theme a {
+  color: #5da9e9;
+}
+
+body.dark-theme .news-box {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .news-box:hover {
+  background-color: #333333;
+  border-color: #5da9e9;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .publication-item,
+body.dark-theme .project-item {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .publication-item:hover,
+body.dark-theme .project-item:hover {
+  background-color: #333333;
+  border-color: #5da9e9;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .btn {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+body.dark-theme .btn:hover {
+  background-color: #444444;
+  box-shadow: 0px 5px 20px -8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .section-title {
+  color: #ffffff;
+}
+
+body.dark-theme h1.name,
+body.dark-theme .lead {
+  color: #ffffff;
+}
+
+body.dark-theme .publication .title {
+  color: #5da9e9;
+}
+
+body.dark-theme .publication .author a {
+  color: #d0d0d0;
+}
+
+body.dark-theme li .description {
+  color: #a0a0a0;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: #3a3a3a;
+  border-color: #5da9e9;
+  color: #ffffff;
+}
+
+body.dark-theme footer {
+  color: #a0a0a0;
+}
+
+body.dark-theme footer a {
+  color: #5da9e9;
+}
 /* End of all :P*/
