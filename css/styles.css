@@ -637,10 +637,11 @@ li .description {
    ============================================ */
 
 /* Theme Toggle Button */
+/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
-  top: 2%;
-  right: 2%;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
   background: #eef0f7;
   border: 2px solid #5b6a9a;
@@ -653,8 +654,8 @@ li .description {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0; /* 重置 margin */
 }
-
 .theme-toggle:hover {
   transform: scale(1.1);
   box-shadow: 0px 5px 20px -8px #ddd;
